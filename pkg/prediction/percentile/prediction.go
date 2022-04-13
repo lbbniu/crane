@@ -134,7 +134,7 @@ func (p *percentilePrediction) QueryRealtimePredictedValuesOnce(ctx context.Cont
 			key := "__all__"
 			signal := signals[key]
 			if signal == nil {
-				return nil, fmt.Errorf("No signal key %v found", key)
+				return nil, fmt.Errorf("no signal key %v found", key)
 			}
 			sample := common.Sample{
 				Value:     estimator.GetEstimation(signal.histogram),
@@ -221,7 +221,7 @@ func (p *percentilePrediction) process(namer metricnaming.MetricNamer, config co
 	if cfg.aggregated {
 		signal := signals[keyAll]
 		if signal == nil {
-			return nil, fmt.Errorf("No signal key %v found", keyAll)
+			return nil, fmt.Errorf("no signal key %v found", keyAll)
 		}
 		sample := common.Sample{
 			Value:     estimator.GetEstimation(signal.histogram),

@@ -163,7 +163,7 @@ func (o *NodeResourceManager) getNode() *v1.Node {
 func (o *NodeResourceManager) FindTargetNode(tsp *predictionapi.TimeSeriesPrediction, addresses []v1.NodeAddress) (bool, error) {
 	address := tsp.Spec.TargetRef.Name
 	if address == "" {
-		return false, fmt.Errorf("Tsp %s target is not specified", tsp.Name)
+		return false, fmt.Errorf("tsp %s target is not specified", tsp.Name)
 	}
 
 	// the reason we use node ip instead of node name as the target name is
