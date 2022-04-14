@@ -1,0 +1,33 @@
+run:
+  timeout: 30m
+
+linters:
+  disable-all: true
+  enable:
+    - deadcode
+    - unused
+    - varcheck
+    - ineffassign
+    - goimports
+    - gofmt
+    - misspell
+    - unparam
+    - unconvert
+    - govet
+    - errcheck
+    - structcheck
+    - staticcheck
+
+linters-settings:
+  staticcheck:
+    go: "1.17"
+    checks: [
+      "all",
+      "-S1023",  # TODO(fix) Omit redundant control flow
+      "-ST1012", # TODO(fix) Poorly chosen name for error variable
+      "-SA1019", # TODO(fix) Using a deprecated function, variable, constant or field
+      "-SA4006", # TODO(fix) A value assigned to a variable is never read before being overwritten
+      "-SA4010", # TODO(fix) The result of append will never be observed anywhere
+    ]
+  unused:
+    go: "1.17"

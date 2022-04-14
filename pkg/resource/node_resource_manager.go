@@ -147,7 +147,6 @@ func (o *NodeResourceManager) UpdateNodeResource() {
 			}
 			klog.V(4).Infof("Update Node %s Extend Resource Success according to TSP %s", node.Name, tsp.Name)
 		}
-		return
 	}
 }
 

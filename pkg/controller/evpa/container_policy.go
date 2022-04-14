@@ -104,7 +104,6 @@ func UpdateCurrentEstimatorStatus(estimator estimator.ResourceEstimatorInstance,
 		},
 	}
 
-	//lint:ignore SA4006 ignore is never used
 	currentEstimatorStatus = append(currentEstimatorStatus, currentStatus) // nolint:ineffassign
 }
 
