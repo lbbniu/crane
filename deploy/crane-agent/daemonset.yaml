@@ -39,6 +39,8 @@ spec:
             - mountPath: /sys
               name: sys
             - mountPath: /var/run
+              name: var
+            - mountPath: /run
               name: run
           livenessProbe:
             httpGet:
@@ -54,5 +56,9 @@ spec:
           name: sys
         - hostPath:
             path: /var/run
+            type: ""
+          name: var
+        - hostPath:
+            path: /run
             type: ""
           name: run
