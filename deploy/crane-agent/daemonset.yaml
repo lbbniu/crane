@@ -39,7 +39,7 @@ spec:
             - mountPath: /sys
               name: sys
             - mountPath: /var/run
-              name: var
+              name: varrun
             - mountPath: /run
               name: run
           livenessProbe:
@@ -57,7 +57,7 @@ spec:
         - hostPath:
             path: /var/run
             type: ""
-          name: var
+          name: varrun
         - hostPath:
             path: /run
             type: ""
