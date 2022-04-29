@@ -7,6 +7,9 @@
 
 <img alt="Crane logo" height="100" src="docs/images/crane.svg" title="Crane" width="200"/>
 
+
+
+
 ---
 
 Crane (FinOps Crane) is a cloud native open source project which manages cloud resources on Kubernetes stack, it is inspired by FinOps concepts.
